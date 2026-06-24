@@ -1,0 +1,1 @@
+//Copyright 2000 Macromedia, Inc. All rights reserved.
