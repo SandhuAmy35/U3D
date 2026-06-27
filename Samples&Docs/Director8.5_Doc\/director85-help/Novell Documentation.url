@@ -1,0 +1,8 @@
+[DEFAULT]
+BASEURL=http://developer.novell.com/ndk/doc/samplecode/njcl_sample/
+[DOC#9#11#13]
+BASEURL=http://developer.novell.com/ndk/doc/samplecode/njcl_sample/File/Search.java.html
+ORIGURL=target.htm
+[InternetShortcut]
+URL=http://developer.novell.com/ndk/doc/samplecode/njcl_sample/
+Modified=D099E0FC9DAFC30155
