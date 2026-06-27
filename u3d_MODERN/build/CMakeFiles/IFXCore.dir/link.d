@@ -1,0 +1,649 @@
+libIFXCore.so: \
+  /home/posiedon/Desktop/Coding/DIRECTOR/u3d_MODERN/RTL/Platform/Lin32/IFXCore/IFXCore.list \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o \
+  CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/IFXCore/IFXCoreDllMain.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/IFXCorePluginStatic/IFXCorePluginStatic.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSLoader.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSRenderWindow.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSUtilities.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXCoincidentVertexMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXCornerIter.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXEuler.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXFatCornerIter.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXTransform.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVectorHasher.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVertexMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVertexMapGroup.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXBitStreamX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXDataBlockQueueX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXDataBlockX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BitStream/IFXHistogramDynamic.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXAnimationModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXBoneWeightsModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXSkeleton.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBoneCacheArray.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBoneNode.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBonesManagerImpl.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXCharacter.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXCoreNode.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXKeyTrack.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMeshGroup_Character.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMixerQueue.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMixerQueueImpl.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotion.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotionManagerImpl.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotionMixerImpl.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXSkin.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXSkin_p3.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXVertexWeight.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXVertexWeights.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXAABBHierarchyBuilder.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXAxisAlignedBBox.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundFace.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundHierarchy.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundUtil.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBTree.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBTreeNode.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXCollisionResult.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXPickObject.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXPrimitiveOverlap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXResultAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXAuthorCLODGen.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXAuthorMeshMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXSetAdjacencyX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXSetX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CLODGenerator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/ContractionRecorder.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Face.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Matrix4x4.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/NormalMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Pair.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairFinder.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairHash.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairHeap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Primitives.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Vertex.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/VertexPairContractor.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXCoreServices.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXCoreServicesRef.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXHashMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXIDManager.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXMetaData.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXNameMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXSimpleHash.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXVoidWrapper.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXComponentDescriptorList.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXComponentIds.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXDids.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorCLODResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorMesh.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorMeshScrub.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXCLODModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXMeshCompiler.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXMeshMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/IFXCLODManager.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/IFXNeighborResController.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContour.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourExtruder.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourGenerator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourTessellator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph2DCommands.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph2DModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph3DGenerator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyphCommandList.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXQuadEdge.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSetAnalyzer.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSet.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSetResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/PointSet/CIFXAuthorPointSet.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Generators/PointSet/CIFXAuthorPointSetResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXInterleavedData.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXMesh.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXMeshGroup.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXNeighborMesh.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXRenderable.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Mesh/IFXFaceLists.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXDidRegistry.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierChain.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierDataElementIter.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierDataPacket.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXSubject.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/IFXModifierChainState.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Palette/CIFXPalette.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Palette/CIFXSimpleObject.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXBoundSphereDataElement.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXDevice.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXDummyModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXFileReference.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXGroup.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLight.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLightResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLightSet.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMarker.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMaterialResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMixerConstruct.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXModel.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMotionResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXNode.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXResourceClient.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSceneGraph.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXShaderList.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSimpleCollection.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSimpleList.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXView.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXViewResource.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/IFXRenderPass.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShader.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShaderLitTexture.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShadingModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/CIFXSubdivModifier.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXAttributeNeighborhood.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXButterflyScheme.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXScreenSpaceMetric.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXSharedUnitAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXSubdivisionManager.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTAddress.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTAttribute.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTBaseTriangle.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTTriangleAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTTriangle.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXVertexAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXImageTools.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXTextureImageTools.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXTextureObject.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVGenerator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperCylindrical.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperNone.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperPlanar.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperReflection.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperSpherical.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/Common/CIFXConnector.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/Common/CIFXPerformanceTimer.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/Common/IFXCheckX.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXComponentManager.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXGUIDHashMap.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXPluginProxy.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/IFXCom.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/Memory/IFXMemory.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXCoreArray.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXCoreList.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXFastAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXListNode.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXMatrix4x4.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXQuaternion.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXString.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXUnitAllocator.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXVector3.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXVector4.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Dependencies/WildCards/wcmatch.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Dependencies/Predicates/predicates.cpp.o \
+  CMakeFiles/IFXCore.dir/RTL/Kernel/Common/IFXDebug.cpp.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libdl.a \
+  /usr/lib/libz.so \
+  /usr/lib/libpng.so \
+  /usr/lib/libz.so \
+  /usr/lib/libjpeg.so \
+  /usr/lib/libpng.so \
+  /usr/lib/libjpeg.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libstdc++.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
+  /usr/lib/libm.so.6 \
+  /usr/lib/libmvec.so.1 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so.1 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/libgcc.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so \
+  /usr/lib/libc.so.6 \
+  /usr/lib/libc_nonshared.a \
+  /usr/lib/ld-linux-x86-64.so.2 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so.1 \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/libgcc.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o
+
+/home/posiedon/Desktop/Coding/DIRECTOR/u3d_MODERN/RTL/Platform/Lin32/IFXCore/IFXCore.list:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o:
+
+CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/IFXCore/IFXCoreDllMain.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/IFXCorePluginStatic/IFXCorePluginStatic.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSLoader.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSRenderWindow.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Platform/Lin32/Common/IFXOSUtilities.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXCoincidentVertexMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXCornerIter.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXEuler.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXFatCornerIter.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXTransform.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVectorHasher.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVertexMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Base/IFXVertexMapGroup.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXBitStreamX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXDataBlockQueueX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BitStream/CIFXDataBlockX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BitStream/IFXHistogramDynamic.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXAnimationModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXBoneWeightsModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/CIFXSkeleton.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBoneCacheArray.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBoneNode.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXBonesManagerImpl.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXCharacter.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXCoreNode.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXKeyTrack.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMeshGroup_Character.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMixerQueue.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMixerQueueImpl.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotion.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotionManagerImpl.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXMotionMixerImpl.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXSkin.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXSkin_p3.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXVertexWeight.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Bones/IFXVertexWeights.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXAABBHierarchyBuilder.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXAxisAlignedBBox.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundFace.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundHierarchy.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBoundUtil.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBTree.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXBTreeNode.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXCollisionResult.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXPickObject.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXPrimitiveOverlap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/BoundHierarchy/CIFXResultAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXAuthorCLODGen.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXAuthorMeshMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXSetAdjacencyX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CIFXSetX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/CLODGenerator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/ContractionRecorder.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Face.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Matrix4x4.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/NormalMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Pair.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairFinder.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairHash.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/PairHeap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Primitives.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/Vertex.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/CLODAuthor/VertexPairContractor.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXCoreServices.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXCoreServicesRef.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXHashMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXIDManager.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXMetaData.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXNameMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXSimpleHash.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/CIFXVoidWrapper.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXComponentDescriptorList.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXComponentIds.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Common/IFXDids.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorCLODResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorMesh.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXAuthorMeshScrub.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXCLODModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXMeshCompiler.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/CIFXMeshMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/IFXCLODManager.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/CLOD/IFXNeighborResController.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContour.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourExtruder.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourGenerator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXContourTessellator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph2DCommands.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph2DModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyph3DGenerator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXGlyphCommandList.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/Glyph2D/CIFXQuadEdge.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSetAnalyzer.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSet.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/LineSet/CIFXAuthorLineSetResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/PointSet/CIFXAuthorPointSet.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Generators/PointSet/CIFXAuthorPointSetResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXInterleavedData.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXMesh.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXMeshGroup.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXNeighborMesh.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/CIFXRenderable.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Mesh/IFXFaceLists.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXDidRegistry.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierChain.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierDataElementIter.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXModifierDataPacket.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/CIFXSubject.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/ModifierChain/IFXModifierChainState.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Palette/CIFXPalette.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Palette/CIFXSimpleObject.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXBoundSphereDataElement.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXDevice.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXDummyModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXFileReference.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXGroup.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLight.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLightResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXLightSet.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMarker.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMaterialResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMixerConstruct.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXModel.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXMotionResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXNode.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXResourceClient.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSceneGraph.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXShaderList.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSimpleCollection.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXSimpleList.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXView.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/CIFXViewResource.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/SceneGraph/IFXRenderPass.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShader.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShaderLitTexture.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Shaders/CIFXShadingModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/CIFXSubdivModifier.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXAttributeNeighborhood.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXButterflyScheme.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXScreenSpaceMetric.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXSharedUnitAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXSubdivisionManager.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTAddress.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTAttribute.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTBaseTriangle.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTTriangleAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXTQTTriangle.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Subdiv/IFXVertexAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXImageTools.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXTextureImageTools.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/Texture/CIFXTextureObject.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVGenerator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperCylindrical.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperNone.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperPlanar.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperReflection.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Component/UVGenerator/CIFXUVMapperSpherical.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/Common/CIFXConnector.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/Common/CIFXPerformanceTimer.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/Common/IFXCheckX.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXComponentManager.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXGUIDHashMap.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/CIFXPluginProxy.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/IFXCom/IFXCom.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/Memory/IFXMemory.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXCoreArray.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXCoreList.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXFastAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXListNode.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXMatrix4x4.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXQuaternion.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXString.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXUnitAllocator.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXVector3.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/DataTypes/IFXVector4.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Dependencies/WildCards/wcmatch.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Dependencies/Predicates/predicates.cpp.o:
+
+CMakeFiles/IFXCore.dir/RTL/Kernel/Common/IFXDebug.cpp.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libdl.a:
+
+/usr/lib/libz.so:
+
+/usr/lib/libpng.so:
+
+/usr/lib/libz.so:
+
+/usr/lib/libjpeg.so:
+
+/usr/lib/libpng.so:
+
+/usr/lib/libjpeg.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libstdc++.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so:
+
+/usr/lib/libm.so.6:
+
+/usr/lib/libmvec.so.1:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so.1:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/libgcc.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic_asneeded.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libatomic.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libc.so:
+
+/usr/lib/libc.so.6:
+
+/usr/lib/libc_nonshared.a:
+
+/usr/lib/ld-linux-x86-64.so.2:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libgcc_s.so.1:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/libgcc.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crtn.o:

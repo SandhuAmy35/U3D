@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -g -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/HelloU3DWorld.dir/link.d CMakeFiles/HelloU3DWorld.dir/Samples/SampleCode/HelloWorld.cpp.o -o HelloU3DWorld  libIFXCoreStatic.a -ldl

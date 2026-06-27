@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -g -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/IDTFGen.dir/link.d CMakeFiles/IDTFGen.dir/Samples/SampleCode/IDTFGen.cpp.o -o IDTFGen  -Wl,-rpath,/home/posiedon/Desktop/Coding/DIRECTOR/u3d_MODERN/build: libIDTF.so -ldl
