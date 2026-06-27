@@ -19,6 +19,12 @@
 #define IFX_INIT_GUID
 
 #include "u3dplayer.h"
+#include "IFXLight.h"
+#include "IFXAuthorCLODResource.h"
+#include "IFXMaterialResource.h"
+#include "IFXShaderLitTexture.h"
+#include "IFXShadingModifier.h"
+#include "IFXBoundSphereDataElement.h"
 
 #include "IFXCOM.h"
 #include "IFXException.h"
@@ -371,6 +377,15 @@ IFXRESULT U3DSamplePlayer::ProcessScheduler()
 {
 	IFXRESULT result;
 	result = m_pScheduler->Service();
+	return result;
+}
+
+IFXRESULT U3DSamplePlayer::UpdateWindow(IFXRenderWindow *winInfo)
+{
+	IFXRESULT result = IFX_OK;
+	if (m_pDevice) {
+		result = m_pDevice->SetWindow(*winInfo);
+	}
 	return result;
 }
 

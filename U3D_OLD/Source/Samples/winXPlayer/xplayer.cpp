@@ -25,124 +25,24 @@
 #include "u3dplayer.h"
 
 #include "IFXQuaternion.h"
+#include "IFXCoreCIDs.h"
+#include <dlfcn.h>
+#include "IFXPlugin.h"
+#include "IFXCOM.h"
 #include "IFXOSUtilities.h"
 
 #define MAXFILENAMELENGTH 512
-#define DEFAULT_DISPLAYNAME ""
+#define DEFAULT_DISPLAYNAME (char*)""
 
 #define	ToRadians(x)	((x)*3.1415926535f/180.0f)
 
-int g_sigQuit;
-
-void SignalQuitHandler(int sig)
-{
-	printf("\nSIGQUIT signal was arrived!!!\n\n");
-	g_sigQuit = TRUE;
-}
-
-IFXRESULT RotateView( F32 fInX, 
-				F32 fInY,
-				BOOL mod,
-				BOOL yKeyDown,
-				IFXVector3		pivotPoint,
-				IFXMatrix4x4	*pViewMatrix)
-{
-	IFXRESULT result = IFX_OK;
-	F32 radians;
-
-	if (pViewMatrix) {
-		if ( mod )
-		{
-			if ( fInX != 0 )
-			{
-				// Roll the camera in camera space
-				radians = ToRadians(fInX * 0.5f);
-				pViewMatrix->Rotate3x4( radians, IFX_Z_AXIS );
-			}
-		}
-		else
-		{
-			if ( fInY != 0 )
-			{
-				F32 *rawMatrix=pViewMatrix->Raw();
-
-				// Tilt camera in world space about pivot
-				radians = ToRadians(-fInY * 0.5f);
-
-				IFXVector3 right(rawMatrix[0], rawMatrix[1], rawMatrix[2]);
-				right.Normalize();
-
-				// Build axis-angle rotation matrix
-				IFXQuaternion	quat;
-				quat.MakeRotation(radians, right);
-
-				IFXMatrix4x4	mAngleAxisRot = quat;
-				IFXMatrix4x4	mIntermediate(rawMatrix);
-
-				// rather than actually compositing these matrices, build
-				// the translation component of TRT^-1 directly (faster).
-
-				rawMatrix[12] = -(pivotPoint.X()*rawMatrix[0] +
-					pivotPoint.Y()*rawMatrix[4] +
-					pivotPoint.Z()*rawMatrix[8]) + pivotPoint.X();
-				rawMatrix[13] = -(pivotPoint.X()*rawMatrix[1] +
-					pivotPoint.Y()*rawMatrix[5] +
-					pivotPoint.Z()*rawMatrix[9]) + pivotPoint.Y();
-				rawMatrix[14] = -(pivotPoint.X()*rawMatrix[2] +
-					pivotPoint.Y()*rawMatrix[6] +
-					pivotPoint.Z()*rawMatrix[10]) + pivotPoint.Z();
+extern int g_sigQuit;
+extern void SignalQuitHandler(int sig);
+class IFXVector3;
+class IFXMatrix4x4;
+extern IFXRESULT RotateView( F32 fInX, F32 fInY, BOOL mod, BOOL yKeyDown, IFXVector3 pivotPoint, IFXMatrix4x4 *pViewMatrix);
 
 
-				// Now apply this rotation about the pivot point
-				pViewMatrix->Multiply3x4(mAngleAxisRot, mIntermediate);		
-			}
-
-			if ( fInX != 0 )
-			{
-				F32 *rawMatrix=pViewMatrix->Raw();
-
-				// compute up vector
-				IFXVector3 up(0.0f, 0.0f, 0.0f);
-				if ( yKeyDown )
-					up.Y() = 1.0f;		// Y is UP
-				else
-					up.Z() = 1.0f;		// Z is UP
-
-				// compute rotation angle
-				radians = ToRadians(-fInX * 0.5f);
-
-				// Rotate camera about Up axis in world space about pivot
-
-				// Build axis-angle rotation matrix
-				IFXQuaternion	quat;
-				quat.MakeRotation(radians, up);
-
-				IFXMatrix4x4	mAngleAxisRot = quat;
-				IFXMatrix4x4	mIntermediate(rawMatrix);
-
-				// rather than actually compositing these matrices, build
-				// the translation component of TRT^-1 directly (faster).
-
-				rawMatrix[12] = -(pivotPoint.X()*rawMatrix[0] +
-					pivotPoint.Y()*rawMatrix[4] +
-					pivotPoint.Z()*rawMatrix[8]) + pivotPoint.X();
-				rawMatrix[13] = -(pivotPoint.X()*rawMatrix[1] +
-					pivotPoint.Y()*rawMatrix[5] +
-					pivotPoint.Z()*rawMatrix[9]) + pivotPoint.Y();
-				rawMatrix[14] = -(pivotPoint.X()*rawMatrix[2] +
-					pivotPoint.Y()*rawMatrix[6] +
-					pivotPoint.Z()*rawMatrix[10]) + pivotPoint.Z();
-
-
-				// Now apply this rotation about the pivot point
-				pViewMatrix->Multiply3x4(mAngleAxisRot, mIntermediate);
-			}
-		}
-	} else
-		result = IFX_E_NOT_INITIALIZED;
-
-	return result;
-}
 
 //
 // CreateWindow creates the Window for rendering with specified size
@@ -186,6 +86,29 @@ int main(int argc, char **argv)
 	signal(SIGQUIT, SignalQuitHandler);
 
 	IFXCOMInitialize();
+	
+	void* handle = dlopen("./libIFXRendering.so", RTLD_NOW | RTLD_GLOBAL);
+	if (handle) {
+		typedef IFXRESULT (IFXAPI_CALLTYPE *IFXPluginRegisterFunction)(U32*, IFXComponentDescriptor**);
+		IFXPluginRegisterFunction reg = (IFXPluginRegisterFunction)dlsym(handle, "IFXPluginRegister");
+		if (reg) {
+			U32 num = 0;
+			IFXComponentDescriptor* pDesc = NULL;
+			if (IFXSUCCESS(reg(&num, &pDesc)) && pDesc) {
+				for (U32 i = 0; i < num; ++i) {
+					IFXRegisterComponent(&pDesc[i]);
+				}
+				printf("Successfully registered %u rendering components.\n", num);
+			} else {
+				printf("Failed to get rendering components.\n");
+			}
+		} else {
+			printf("Failed to find IFXPluginRegister: %s\n", dlerror());
+		}
+	} else {
+		printf("Failed to dlopen libIFXRendering.so: %s\n", dlerror());
+	}
+	
 {
 	U3DSamplePlayer u3dApp;
 
@@ -199,7 +122,7 @@ int main(int argc, char **argv)
 			 GLX_RED_SIZE, 1,
 			 GLX_GREEN_SIZE, 1,
 			 GLX_BLUE_SIZE, 1,
-			 GLX_DEPTH_SIZE, 1,
+			 GLX_DEPTH_SIZE, 24,
 			 GLX_DOUBLEBUFFER,
 			 None };
 	
@@ -225,50 +148,84 @@ int main(int argc, char **argv)
 	}
 
 	if (IFXSUCCESS(result)) 
-		result = u3dApp.InitScene(fileName);
+        {
+                result = u3dApp.InitScene(fileName);
+                if (IFXFAILURE(result)) printf("InitScene failed with 0x%08x\n", result);
+        }
 
-	if (IFXSUCCESS(result)) 
-	{
-		dpy = XOpenDisplay(displayName);
-		if (NULL == dpy)
-			result = IFX_E_RESOURCE_NOT_AVAILABLE;
-	}
+        if (IFXSUCCESS(result)) 
+        {
+                dpy = XOpenDisplay(displayName);
+                if (NULL == dpy)
+                {
+                        printf("XOpenDisplay failed\n");
+                        result = IFX_E_RESOURCE_NOT_AVAILABLE;
+                }
+        }
 
-	if (IFXSUCCESS(result)) 
-	{
-		U32 scrnum = DefaultScreen( dpy );
-		visinfo = glXChooseVisual( dpy, scrnum, attrib );
-		if (!visinfo) {
-		   printf("Error: couldn't get an RGB, Double-buffered visual\n");
-		   result = IFX_E_UNSUPPORTED;
-		}
-	}
+        if (IFXSUCCESS(result)) 
+        {
+                U32 scrnum = DefaultScreen( dpy );
+                visinfo = glXChooseVisual( dpy, scrnum, attrib );
+                if (!visinfo) {
+                   printf("Error: couldn't get an RGB, Double-buffered visual\n");
+                   result = IFX_E_UNSUPPORTED;
+                }
+        }
 
-	if (IFXSUCCESS(result)) 
-	{
-		winsize.Set(0, 0, 640, 480);
-		win = CreateWindow(dpy, winsize, visinfo);
-		///@todo: do proper error handling for XCreateWindow
-	}
+        if (IFXSUCCESS(result)) 
+        {
+                winsize.Set(0, 0, 640, 480);
+                win = CreateWindow(dpy, winsize, visinfo);
+                printf("xplayer win: %lu\n", win);
+                XMapWindow(dpy, win);
+                ///@todo: do proper error handling for XCreateWindow
+        }
 
-	if (IFXSUCCESS(result)) 
-	{
-		renderWin.SetWindowPtr(dpy);
-		renderWin.SetVisual(visinfo);
-		renderWin.SetDrawable(win);
-		renderWin.SetWindowSize(winsize);
+        if (IFXSUCCESS(result)) 
+        {
+                XWindowAttributes xwa;
+                XGetWindowAttributes(dpy, win, &xwa);
+                winsize.m_X = 0;
+                winsize.m_Y = 0;
+                winsize.m_Width = xwa.width;
+                winsize.m_Height = xwa.height;
 
-		///initialize Renderer
-		result = u3dApp.InitRender(&renderWin);
-	}
+                renderWin.SetWindowPtr(dpy);
+                renderWin.SetVisual(visinfo);
+                renderWin.SetDrawable(win);
+                renderWin.SetWindowSize(winsize);
+
+                ///initialize Renderer
+                result = u3dApp.InitRender(&renderWin);
+                if (IFXFAILURE(result)) printf("InitRender failed with 0x%08x\n", result);
+        }
+
+        XWindowAttributes xwa;
+        XGetWindowAttributes(dpy, win, &xwa);
+        winsize.m_X = 0;
+        winsize.m_Y = 0;
+        winsize.m_Width = xwa.width;
+        winsize.m_Height = xwa.height;
+        renderWin.SetWindowSize(winsize);
+        u3dApp.UpdateWindow(&renderWin);
 
 
-	//ViewNode
-	IFXDECLARELOCAL(IFXView, pView);
-	if (IFXSUCCESS(result))
-		result = u3dApp.FindView(&pView);
-	if (IFXSUCCESS(result))
-		result = u3dApp.SetView(pView);
+        //ViewNode
+        IFXDECLARELOCAL(IFXView, pView);
+        if (IFXSUCCESS(result))
+        {
+                result = u3dApp.FindView(&pView);
+                if (IFXFAILURE(result)) {
+					printf("FindView failed with 0x%08x\n", result);
+					printf("ERROR: No IFXView (Camera) node found in the U3D file! Ensure the scene was exported with a camera.\n");
+				}
+        }
+        if (IFXSUCCESS(result))
+        {
+                result = u3dApp.SetView(pView);
+                if (IFXFAILURE(result)) printf("SetView failed with 0x%08x\n", result);
+        }
 
 	if (IFXSUCCESS(result))
 		result = u3dApp.ClearBackbuffer(pView);
@@ -288,6 +245,16 @@ int main(int argc, char **argv)
 			case ConfigureNotify:
 				///@todo: resize
 				printf("\nConfigureNotify\n\n");
+				{
+					XWindowAttributes xwa;
+					XGetWindowAttributes(dpy, win, &xwa);
+					winsize.m_X = 0;
+					winsize.m_Y = 0;
+					winsize.m_Width = xwa.width;
+					winsize.m_Height = xwa.height;
+					renderWin.SetWindowSize(winsize);
+					u3dApp.UpdateWindow(&renderWin);
+				}
 				break;
 			case KeyPress:
 				{
@@ -307,10 +274,14 @@ int main(int argc, char **argv)
 		}
 		if (result != IFX_CANCEL) 
 		{
-			if (IFXSUCCESS(result))
+			if (IFXSUCCESS(result)) {
 				result = u3dApp.ProcessScheduler();
-			if (IFXSUCCESS(result))
+				if (IFXFAILURE(result)) printf("ProcessScheduler failed with 0x%08x\n", result);
+			}
+			if (IFXSUCCESS(result)) {
 				result = u3dApp.Render();
+				if (IFXFAILURE(result)) printf("Render failed with 0x%08x\n", result);
+			}
 
 			//calculate frame rate
 			if (IFXSUCCESS(result))
@@ -342,13 +313,17 @@ int main(int argc, char **argv)
 			   viewMatrix = (IFXMatrix4x4)pView->GetMatrix(0);
 
 			   result = RotateView(0.1, 0.1, FALSE, FALSE, pivotPoint, &viewMatrix);
+			   if (IFXFAILURE(result)) printf("RotateView failed with 0x%08x\n", result);
 
-			   result = pView->SetMatrix(0, &viewMatrix);
+			   if (IFXSUCCESS(result))
+				  result = pView->SetMatrix(0, &viewMatrix);
 			}
 
 		}
      }
-}
+    printf("Exiting main loop, result: 0x%08x\n", result);
+
+	IFXRELEASE(pView);
 	IFXCOMUninitialize();
 
 	if (dpy)
@@ -358,6 +333,11 @@ int main(int argc, char **argv)
 		XCloseDisplay(dpy);
 	}
 
-	return result;
-}
+        if (IFXFAILURE(result))
+        {
+                printf("Error: winXPlayer failed with result 0x%08x\n", result);
+        }
 
+        return result;
+}
+}

@@ -45,6 +45,7 @@ public:
     ~U3DSamplePlayer();
 
 	IFXRESULT InitRender(IFXRenderWindow *winInfo);
+	IFXRESULT UpdateWindow(IFXRenderWindow *winInfo);
 	IFXRESULT InitScene(IFXCHAR* fileName);
 	IFXRESULT FindNextModel(U32* currentID, IFXModel** pModel);
 	IFXRESULT FindView(IFXView** pView);
