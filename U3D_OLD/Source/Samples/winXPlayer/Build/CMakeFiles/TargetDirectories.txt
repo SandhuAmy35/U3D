@@ -1,0 +1,4 @@
+/home/posiedon/Desktop/Coding/DIRECTOR/U3D_OLD/Source/Samples/winXPlayer/Build/CMakeFiles/winXPlayer.dir
+/home/posiedon/Desktop/Coding/DIRECTOR/U3D_OLD/Source/Samples/winXPlayer/Build/CMakeFiles/IFXRendering.dir
+/home/posiedon/Desktop/Coding/DIRECTOR/U3D_OLD/Source/Samples/winXPlayer/Build/CMakeFiles/edit_cache.dir
+/home/posiedon/Desktop/Coding/DIRECTOR/U3D_OLD/Source/Samples/winXPlayer/Build/CMakeFiles/rebuild_cache.dir
